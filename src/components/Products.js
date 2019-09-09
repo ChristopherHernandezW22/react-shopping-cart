@@ -6,14 +6,14 @@ import Product from './Product';
 import ProductContext from '../contexts/ProductContext';
 
 const Products = props => {
-	const value = useContext(ProductContext);
+	const { products, addItem } = useContext(ProductContext);
 	return (
 		<div className="products-container">
-			{value.products.map(product => (
+			{products.map(product => (
 				<Product
 					key={product.id}
 					product={product}
-					addItem={value.addItem}
+					addItem={addItem}
 				/>
 			))}
 		</div>

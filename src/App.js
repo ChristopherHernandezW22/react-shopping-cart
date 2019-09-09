@@ -25,19 +25,8 @@ function App() {
 			<Navigation />
 
 			{/* Routes */}
-			<Route exact path="/" component={Products}
-				// render={() => (
-				// 	<Products
-				// 		products={products}
-				// 		addItem={addItem}
-				// 	/>
-				// )}
-			/>
-
-			<Route
-				path="/cart"
-				render={() => <ShoppingCart cart={cart} />}
-			/>
+			<Route exact path="/" component={Products} />
+			<Route path="/cart"	component={ShoppingCart} />
 		</div>
 		</CartContext.Provider>
 		</ ProductContext.Provider>
